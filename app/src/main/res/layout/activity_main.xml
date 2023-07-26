@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/MainActivity"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.MainActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/white"
+                android:backgroundTint="@color/white"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/TopVideoComponent"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <ImageView
+                        android:id="@+id/imageView"
+                        android:layout_width="match_parent"
+                        android:layout_height="396dp"
+                        android:background="@color/black"
+                        android:contentDescription="ViewImage"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/rectangle_1_nologo_1"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.347"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <ImageButton
+                        android:id="@+id/video_play"
+                        android:layout_width="match_parent"
+                        android:layout_height="132dp"
+                        android:background="#00000000"
+                        android:orientation="vertical"
+                        android:src="@drawable/cirlce_play_black"
+                        app:layout_constraintBottom_toBottomOf="@id/imageView"
+                        app:layout_constraintEnd_toEndOf="@id/imageView"
+                        app:layout_constraintStart_toStartOf="@id/imageView"
+                        app:layout_constraintTop_toBottomOf="@+id/imageView"
+                        app:layout_constraintTop_toTopOf="@id/imageView"
+                        tools:ignore="SpeakableTextPresentCheck" />
+
+                    <ImageButton
+                        android:id="@+id/modal_close_button"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_margin="10dp"
+                        android:elevation="20dp"
+                        android:src="@drawable/ic_chevron_left_white"
+                        app:layout_constraintStart_toStartOf="@id/imageView"
+                        app:layout_constraintTop_toTopOf="@id/imageView" />
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/indicators"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:cardElevation="6dp"
+                        app:layout_constraintTop_toBottomOf="@id/imageView">
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:id="@+id/containerConstraint"
+                            android:layout_width="match_parent"
+                            android:layout_height="75dp"
+                            app:layout_constraintTop_toBottomOf="@id/imageView">
+
+                            <View
+                                android:id="@+id/rectangleGradient"
+                                android:layout_width="5dp"
+                                android:layout_height="match_parent"
+                                android:background="@drawable/background_rectangle_gradient_pink"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                            <TextView
+                                android:id="@+id/day"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="30dp"
+                                android:layout_marginTop="10dp"
+                                android:text="@string/day_1"
+                                android:textAppearance="@style/TextAppearance.AppCompat.Light.SearchResult.Title"
+                                android:textSize="15sp"
+                                android:textStyle="bold"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="@id/containerConstraint" />
+
+                            <TextView
+                                android:id="@+id/title_day"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="40dp"
+                                android:layout_marginTop="10dp"
+                                android:text="@string/lower_body_abs"
+                                android:textAppearance="@style/TextAppearance.AppCompat.Light.SearchResult.Title"
+                                android:textSize="15sp"
+                                android:textStyle="bold"
+                                app:layout_constraintStart_toStartOf="@id/day"
+                                app:layout_constraintTop_toTopOf="@id/containerConstraint" />
+
+                            <ImageView
+                                android:id="@+id/watchIcon"
+                                android:layout_width="25dp"
+                                android:layout_height="25dp"
+                                android:layout_marginStart="30dp"
+                                android:layout_marginTop="5dp"
+                                android:contentDescription="@string/watchicon"
+                                android:src="@drawable/watch_icon"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toBottomOf="@id/day" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="10dp"
+                                android:layout_marginTop="7dp"
+                                android:text="20 min"
+                                app:layout_constraintStart_toEndOf="@id/watchIcon"
+                                app:layout_constraintTop_toBottomOf="@id/title_day" />
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+                    <TextView
+                        android:id="@+id/description"
+                        android:layout_width="330dp"
+                        android:layout_height="wrap_content"
+                        android:text="@string/loremipsu"
+                        app:layout_constraintTop_toBottomOf="@id/indicators"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        android:textSize="13sp"
+                        android:layout_marginTop="25dp"
+                        android:lineSpacingExtra="5sp"
+                        android:textColor="#616161"/>
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">MyJobInterview</string>
+    <string name="start_program">START PROGRAM</string>
+    <string name="day_1">Day 1</string>
+    <string name="lower_body_abs"><![CDATA[ - Lower Body & Abs]]></string>
+    <string name="watchicon">watchIcon</string>
+    <string name="loremipsu">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vel tincidunt. Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vel tincidunt. Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet, consectetur adipiscing elit.</string>
+    <string name="productos">Productos</string>
+    <string name="precio">Precio</string>
+    <string name="precioName">Precio: 1749</string>
+    <string name="detail">Detail</string>
+
+</resources>
